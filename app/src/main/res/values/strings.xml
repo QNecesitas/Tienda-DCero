@@ -12,4 +12,8 @@
     <string name="Mostrar_Ocultar">Mostrar/Ocultar</string>
     <string name="Eliminar">Eliminar</string>
     <string name="Editar">Editar</string>
+    <string name="carrito">Carrito</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="precio">Precio:</string>
+    <string name="cantidad">Cantidad:</string>
 </resources>
