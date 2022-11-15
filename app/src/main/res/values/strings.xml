@@ -14,4 +14,21 @@
     <string name="Editar">Editar</string>
     <string name="Agregar_producto">Agregar producto</string>
     <string name="Producto">Producto</string>
+    <string name="Descripcion">Descripción</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Agregar">Agregar</string>
+    <string name="Vsibilidad">Visibilidad</string>
+    <string name="_0CUP">0.00 CUP</string>
+    <string name="Sobre_nosotros">Sobre nosotros</string>
+    <string name="Sobre_los_desarrolladores">Sobre los desarrolladores</string>
+    <string name="Terminos_de_uso">Términos de uso</string>
+    <string name="Pedidos">Pedidos</string>
+    <string name="Imagen_de_la_empresa">Imagen de la empresa</string>
+    <string name="Mipyme_d_cero">Mipyme D\'Cero</string>
+    <string name="Contacto">Contacto</string>
+    <string name="Carrito">Carrito</string>
+    <string name="Correo">Correo</string>
+    <string name="Numero_de_telefono">Número de teléfono</string>
+    <string name="_5352364120">+5352364120</string>
+    <string name="dcero_srl_gmail_com">dcero.srl@gmail.com</string>
 </resources>
