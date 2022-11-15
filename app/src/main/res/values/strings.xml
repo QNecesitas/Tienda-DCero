@@ -3,13 +3,15 @@
     <string name="Productos">Productos</string>
     <string name="Precio">Precio</string>
     <string name="Nombre_del_producto">Nombre del producto</string>
-    <string name="Carpinteria">Carpinteria</string>
-    <string name="Construccion">Construccion</string>
-    <string name="Plomeria">Plomeria</string>
-    <string name="Categoria_plomeria">Categoria plomeria</string>
-    <string name="Categoria_construccion">Categoria construccion</string>
-    <string name="Categoria_carpinteria">Categoria carpinteria</string>
+    <string name="Carpinteria">Carpintería</string>
+    <string name="Construccion">Construcción</string>
+    <string name="Plomeria">Plomerìa</string>
+    <string name="Categoria_plomeria">Categoría plomería</string>
+    <string name="Categoria_construccion">Categoría construcción</string>
+    <string name="Categoria_carpinteria">Categoría carpintería</string>
     <string name="Mostrar_Ocultar">Mostrar/Ocultar</string>
     <string name="Eliminar">Eliminar</string>
     <string name="Editar">Editar</string>
+    <string name="Agregar_producto">Agregar producto</string>
+    <string name="Producto">Producto</string>
 </resources>

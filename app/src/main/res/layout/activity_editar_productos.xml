@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@id/cordinator_recycler_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/activity_personalizar_menu_toolbar"
             android:layout_width="match_parent"
@@ -26,27 +26,38 @@
             app:titleTextColor="@color/white"/>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--Barra FAB-->
+    <!--Recycler y BarraBottom-->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cordinator_recycler_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_personalizar_menu_appBar">
 
-        <!--Scrollable content-->
+        <!--Recycler-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--FAB-->
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            app:navigationIcon="@drawable/menu"
             app:menu="@menu/menu_appbarbottom"
-            />
+            app:navigationIcon="@drawable/menu" />
 
+        <!--Bar-->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_anchor="@id/bottomAppBar"
-            android:src="@drawable/add"/>
+            android:contentDescription="@string/Agregar_producto"
+            android:src="@drawable/add"
+            app:layout_anchor="@id/bottomAppBar" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
