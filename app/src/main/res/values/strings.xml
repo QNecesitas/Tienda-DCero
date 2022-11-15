@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TiendaDCero_v1.0</string>
+    <string name="Productos">Productos</string>
+    <string name="Precio">Precio</string>
+    <string name="Nombre_del_producto">Nombre del producto</string>
+    <string name="Carpinteria">Carpinteria</string>
+    <string name="Construccion">Construccion</string>
+    <string name="Plomeria">Plomeria</string>
+    <string name="Categoria_plomeria">Categoria plomeria</string>
+    <string name="Categoria_construccion">Categoria construccion</string>
+    <string name="Categoria_carpinteria">Categoria carpinteria</string>
+    <string name="Mostrar_Ocultar">Mostrar/Ocultar</string>
+    <string name="Eliminar">Eliminar</string>
+    <string name="Editar">Editar</string>
 </resources>

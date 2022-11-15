@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:contentDescription="@string/Categoria_carpinteria"
+        android:id="@+id/menu_carpinteria"
+        android:icon="@drawable/carpenter"
+        android:title="@string/Carpinteria"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:contentDescription="@string/Categoria_construccion"
+        android:id="@+id/menu_construccion"
+        android:icon="@drawable/handyman"
+        android:title="@string/Construccion"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:contentDescription="@string/Categoria_plomeria"
+        android:id="@+id/menu_plomeria"
+        android:icon="@drawable/faucet"
+        android:title="@string/Plomeria"
+        app:showAsAction="ifRoom"
+        />
+
+
+</menu>
