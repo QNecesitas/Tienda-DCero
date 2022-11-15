@@ -3,58 +3,128 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <androidx.cardview.widget.CardView
-        android:layout_marginEnd="50sp"
-        android:layout_marginStart="50sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginStart="20sp"
         android:layout_width="match_parent"
-        android:layout_height="250sp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:elevation="12sp"
-        android:translationZ="12sp">
+        android:translationZ="12sp"
+        app:cardCornerRadius="@dimen/radius_cards">
 
-        <RelativeLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/Image_edit_product"
-                android:layout_margin="20sp"
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CV_Image"
                 android:layout_width="130sp"
-                android:layout_height="130sp"/>
+                android:layout_height="130sp"
+                android:layout_marginStart="12sp"
+                android:layout_marginTop="12sp"
+                android:elevation="0sp"
+                android:translationZ="0sp"
+                app:cardBackgroundColor="@color/white_gray"
+                app:cardCornerRadius="@dimen/radius_cards"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/Image_edit_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shopping_bag"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/Producto" />
+
+            </androidx.cardview.widget.CardView>
+
 
             <EditText
-                android:id="@+id/Name_edit_product"
-                android:layout_margin="20sp"
-                android:layout_width="120sp"
+                android:maxLength="60"
+                android:inputType="text"
+                android:autofillHints="none"
+                app:layout_constraintTop_toTopOf="@id/CV_Image"
+                app:layout_constraintStart_toEndOf="@id/CV_Image"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/ET_Nombre"
+                android:layout_width="150sp"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/Image_edit_product"/>
+                android:hint="@string/Nombre_del_producto"
+                android:textSize="@dimen/medium"
+                app:layout_constraintBottom_toTopOf="@id/ET_Precio"/>
+
 
             <EditText
-                android:layout_margin="20sp"
-                android:layout_width="120sp"
+                android:maxLength="10"
+                android:autofillHints="none"
+                android:layout_marginBottom="12sp"
+                android:id="@+id/ET_Precio"
+                android:layout_width="150sp"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/Image_edit_product"
-                android:layout_below="@id/Name_edit_product"
+                app:layout_constraintTop_toBottomOf="@id/ET_Nombre"
+                app:layout_constraintStart_toEndOf="@id/CV_Image"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_below="@id/ET_Nombre"
+                android:hint="@string/Precio"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/medium"
+                app:layout_constraintBottom_toBottomOf="@id/CV_Image"
                 />
 
-            <EditText
-                android:layout_width="230sp"
+           <EditText
+               android:inputType="text"
+               android:autofillHints="none"
+               android:maxLength="250"
+               android:id="@+id/ET_Desc"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toBottomOf="@id/CV_Image"
+               android:layout_margin="16sp"
+               android:hint="@string/Descripcion"
+               android:textAlignment="center"
+                />
+
+            <Button
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/Cancelar"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="20sp"
+                app:layout_constraintTop_toBottomOf="@id/ET_Desc"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Image_edit_product"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20sp"
+                style="?attr/materialButtonOutlinedStyle"
+                />
+
+            <Button
+                android:text="@string/Agregar"
+                android:layout_marginBottom="20sp"
+                app:layout_constraintTop_toBottomOf="@id/ET_Desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="20sp"
-                android:layout_marginStart="20sp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20sp"
+                />
 
 
 
 
-        </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

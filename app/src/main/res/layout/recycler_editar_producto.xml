@@ -6,48 +6,56 @@
 
     <!--Image and price-->
     <androidx.cardview.widget.CardView
-        android:id="@+id/recycler_cv_image"
-        app:cardCornerRadius="20sp"
+        android:id="@+id/CV_Image"
+        app:cardCornerRadius="@dimen/radius_cards"
         android:layout_margin="20sp"
         android:layout_width="match_parent"
         android:layout_height="385sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:translationZ="12sp"
-        android:elevation="12sp">
-
+        android:translationZ="8sp"
+        app:cardElevation="8sp">
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/IV_producto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="12sp"
+                android:contentDescription="@string/Producto"
                 android:src="@drawable/shopping_bag"
-                app:tint="#C8C7C7"
-                android:contentDescription="@string/Productos"/>
+                app:tint="@color/white_gray" />
 
             <ImageView
+                android:contentDescription="@string/Vsibilidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/visibility"
                 android:layout_marginStart="10sp"
-                android:layout_marginTop="10sp"/>
+                android:layout_marginTop="10sp"
+                app:tint="@color/red" />
 
             <TextView
+                android:paddingEnd="16sp"
+                android:paddingStart="16sp"
+                android:paddingTop="4sp"
+                android:paddingBottom="4sp"
+                android:background="@drawable/redonded_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Precio"
+                android:text="@string/_0CUP"
                 android:layout_gravity="end"
                 android:layout_marginEnd="20sp"
-                android:layout_marginTop="12sp"/>
-
+                android:layout_marginTop="12sp"
+                android:textSize="@dimen/x_large"/>
 
 
         </FrameLayout>
-
-
     </androidx.cardview.widget.CardView>
 
     <!--Name-->
@@ -56,11 +64,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recycler_cv_image"
+        app:layout_constraintTop_toBottomOf="@id/CV_Image"
         android:text="@string/Nombre_del_producto"
         android:textSize="@dimen/xx_large">
 

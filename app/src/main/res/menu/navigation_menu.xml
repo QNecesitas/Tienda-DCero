@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group >
+        <item android:title="@string/Pedidos" android:icon="@drawable/local_post_office"/>
+        <item android:title="@string/Sobre_nosotros" android:icon="@drawable/info"/>
+        <item android:title="@string/Terminos_de_uso" android:icon="@drawable/book"/>
+        <item android:title="@string/Sobre_los_desarrolladores" android:icon="@drawable/developer_mode"/>
+    </group>
+
+</menu>
