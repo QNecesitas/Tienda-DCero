@@ -1,65 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
-
-    <!--1-Toolbar-->
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/activity_home_toolbar"
+    android:orientation="vertical"
+    tools:context=".Activity_EditarProductos">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/activity_home_menu_toolbar"
+        android:layout_height="match_parent">
+
+
+        <!--Toolbar-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/activity_personalizar_menu_appBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            android:theme="@style/ToolbarIcons"
-            app:title="Productos"
-            app:titleTextColor="@color/white"/>
-    </com.google.android.material.appbar.AppBarLayout>
+            android:fitsSystemWindows="true">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/activity_personalizar_menu_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ToolbarIcons"
+                app:title="Editar productos"
+                app:titleTextColor="@color/white"/>
+        </com.google.android.material.appbar.AppBarLayout>
 
-    <!--2-CoordinatorLayout-->
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
+        <!--Recycler y BarraBottom-->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/cordinator_recycler_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Recycler-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--FAB-->
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:menu="@menu/menu_appbarbottom"
+                app:navigationIcon="@drawable/menu" />
+
+            <!--Bar-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/Agregar_producto"
+                android:src="@drawable/shopping_cart"
+                app:layout_anchor="@id/bottomAppBar" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!-- Navegation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/categorias_nav_drawer"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/activity_home_toolbar"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navigation_menu_productos" />
 
-        <!--2.1-Recycler Productos-->
-        <androidx.recyclerview.widget.RecyclerView
-            android:clipToPadding="false"
-            android:id="@+id/recycler_home_productos"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/activity_home_toolbar"
-            android:paddingBottom="100dp"/>
 
-        <!--2.2-Scrollable content-->
-        <com.google.android.material.bottomappbar.BottomAppBar
-            app:hideOnScroll="true"
-            android:id="@+id/bottomAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            app:navigationIcon="@drawable/menu"
-            app:menu="@menu/menu_appbarbottom"
-            />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_anchor="@id/bottomAppBar"
-            android:src="@drawable/shopping_cart"/>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

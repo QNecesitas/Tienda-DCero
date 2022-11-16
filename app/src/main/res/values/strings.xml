@@ -31,4 +31,9 @@
     <string name="Numero_de_telefono">Número de teléfono</string>
     <string name="_5352364120">+5352364120</string>
     <string name="dcero_srl_gmail_com">dcero.srl@gmail.com</string>
+    <string name="Cantidad">Cantidad</string>
+    <string name="_1">1</string>
+    <string name="Menos">menos</string>
+    <string name="m_s">Más</string>
+    <string name="Al_carrito">Al carrito</string>
 </resources>
