@@ -55,7 +55,7 @@ public class Activity_EditarProductos extends AppCompatActivity {
     }
 
     public void click_FABadd(View view) {
-
+        liAddElement();
     }
 
 
@@ -107,7 +107,7 @@ public class Activity_EditarProductos extends AppCompatActivity {
                                     uploadInfoAdd(et_nombre.getText().toString(),et_precio.getText().toString());
                                 }
                             } else {
-                                et_nombre.setError(getString(R.string.existe_categoria_con_este_nombre));
+                                et_nombre.setError(getString(R.string.existe_ya_producto_con_este_nombre));
                             }
                         }else{
                             et_precio.setError(getString(R.string.campo_vacio));

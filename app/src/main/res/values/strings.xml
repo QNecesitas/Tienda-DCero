@@ -36,4 +36,5 @@
     <string name="Aceptar">Aceptar</string>
     <string name="Agregando_producto">Agregando producto</string>
     <string name="Espere">Por favor, espere…</string>
+    <string name="existe_ya_producto_con_este_nombre">Existe ya un producto con este nombre</string>
 </resources>

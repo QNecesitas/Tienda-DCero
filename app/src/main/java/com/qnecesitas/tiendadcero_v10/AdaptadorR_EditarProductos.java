@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -50,9 +51,11 @@ public class AdaptadorR_EditarProductos extends RecyclerView.Adapter<AdaptadorR_
                 .into(holder.imagenview);
 
         holder.nombre.setText(modelo.getNombre());
-        holder.precio.setText(modelo.getPrecio()+" "+context.getString(R.string.Productos));
-
-    }
+        holder.precio.setText(modelo.getPrecio()+"  CUP");
+        if(modelo.isEstado()) {
+            holder.visibilidad.setImageDrawable(AppCompatResources.getDrawable(context, R.drawable.visibility));
+        }
+        }
 
     public void setClickListener(RecyclerTouchListener listener){
         this.listener=listener;

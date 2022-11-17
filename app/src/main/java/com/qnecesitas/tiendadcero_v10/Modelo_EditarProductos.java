@@ -8,6 +8,7 @@ public class Modelo_EditarProductos {
     private int id;
     private String descripcion;
 
+
     public Modelo_EditarProductos(String nombre, int precio, boolean estado, int id, String descripcion) {
         this.nombre = nombre;
         this.precio = precio;
@@ -15,7 +16,6 @@ public class Modelo_EditarProductos {
         this.id = id;
         this.descripcion = descripcion;
     }
-
 
     public String getNombre() {
         return nombre;
