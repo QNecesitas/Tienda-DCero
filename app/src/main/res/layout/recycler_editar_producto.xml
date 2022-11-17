@@ -32,6 +32,7 @@
                 app:tint="@color/white_gray" />
 
             <ImageView
+                android:id="@+id/IV_visibilidad"
                 android:contentDescription="@string/Vsibilidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,6 +42,7 @@
                 app:tint="@color/red" />
 
             <TextView
+                android:id="@+id/TV_precio"
                 android:paddingEnd="16sp"
                 android:paddingStart="16sp"
                 android:paddingTop="4sp"
@@ -64,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
-
+        android:id="@+id/TV_nombre_del_producto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/CV_Image"
