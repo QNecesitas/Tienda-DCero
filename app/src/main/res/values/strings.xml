@@ -31,10 +31,9 @@
     <string name="Numero_de_telefono">Número de teléfono</string>
     <string name="_5352364120">+5352364120</string>
     <string name="dcero_srl_gmail_com">dcero.srl@gmail.com</string>
-    <string name="Se_ha_producido_un_error">Se ha producido un error</string>
-    <string name="Revise_su_conexion">Revise su conexión a Internet e intente de nuevo</string>
-    <string name="Aceptar">Aceptar</string>
-    <string name="Agregando_producto">Agregando producto</string>
-    <string name="Espere">Por favor, espere…</string>
-    <string name="existe_ya_producto_con_este_nombre">Existe ya un producto con este nombre</string>
+    <string name="Cantidad">Cantidad</string>
+    <string name="_1">1</string>
+    <string name="Menos">menos</string>
+    <string name="m_s">Más</string>
+    <string name="Al_carrito">Al carrito</string>
 </resources>

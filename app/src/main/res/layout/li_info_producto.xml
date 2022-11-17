@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--0-Contenedor-General-->
+<androidx.cardview.widget.CardView
+    android:layout_margin="40sp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="12sp"
+    android:translationZ="12sp"
+    app:cardCornerRadius="@dimen/radius_cards">
+
+    <!--Container-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--TV Nombre Producto-->
+        <TextView
+            android:padding="12sp"
+            android:id="@+id/tv_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Nombre_del_producto"
+            android:textAlignment="center"
+            android:textSize="@dimen/xx_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--IV Imagen Producto-->
+        <LinearLayout
+            android:id="@+id/ll_imagen"
+            android:layout_width="0sp"
+            android:layout_height="270sp"
+            android:background="@color/white_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nombre">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shopping_bag"
+                android:backgroundTint="@color/white" />
+
+        </LinearLayout>
+
+
+        <!--TV Descripcion-->
+        <TextView
+            android:id="@+id/tv_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Descripcion"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_imagen"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="10sp"/>
+
+        <!--Cantidad-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="20sp"
+            android:id="@+id/cl_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_descripcion"
+            app:layout_constraintEnd_toStartOf="@id/cl_precio">
+
+            <TextView
+                android:id="@+id/tv_cant"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/medium"
+                android:text="@string/Cantidad"/>
+
+            <!--5.1-LLH con elegir cantidad-->
+            <LinearLayout
+                android:layout_marginTop="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_cant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--5.1.1-IV "-menos"-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/Menos"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/remove"/>
+
+                <!--5.1.2-ET de elegir cantidad-->
+                <EditText
+                    android:textSize="@dimen/medium"
+                    android:textAlignment="center"
+                    android:id="@+id/et_cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/_1"
+                    android:inputType="number"
+                    android:minWidth="50sp"
+                    android:autofillHints="no" />
+
+                <!--5.1.3-IV "+mas"-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/m_s"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/add"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Precio-->
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_marginTop="20sp"
+           android:id="@+id/cl_precio"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/tv_descripcion"
+           app:layout_constraintStart_toEndOf="@id/cl_cantidad">
+
+           <TextView
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:id="@+id/tv_prec"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAlignment="center"
+               android:textSize="@dimen/medium"
+               android:text="@string/Precio"
+               android:layout_weight="1"/>
+
+           <TextView
+               android:layout_marginTop="12sp"
+               app:layout_constraintTop_toBottomOf="@id/tv_prec"
+               android:id="@+id/tv_precio"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="@string/_0CUP"
+               android:textAlignment="center"
+               android:textSize="@dimen/medium"
+               android:layout_weight="1"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--6 CV boton de cancelar-->
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/cv_boton_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_cantidad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cv_boton_carrito"
+            android:text="@string/Cancelar"/>
+
+        <!--7 CV boton de ir al carrito-->
+        <Button
+            app:layout_constraintTop_toTopOf="@id/cv_boton_cancelar"
+            android:id="@+id/cv_boton_carrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/cv_boton_cancelar"
+            app:layout_constraintTop_toBottomOf="@id/cl_precio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20sp"
+            android:text="@string/Al_carrito"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
