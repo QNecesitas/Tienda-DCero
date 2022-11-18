@@ -1,4 +1,4 @@
-package com.example.elemperadorvedado;
+package com.qnecesitas.tiendadcero_v10;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
