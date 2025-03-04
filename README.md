@@ -21,6 +21,6 @@ This repository contains the code for **DCero Store**, a mobile application deve
 This code is public and shared as part of the development team's portfolio. The application does not contain any sensitive information and is intended solely for professional and academic demonstration purposes.
 
 ## Screenshots
-<img src="https://github.com/YourRepository/DCero/blob/master/screenshots/dcero1.jpg">
-<img src="https://github.com/YourRepository/DCero/blob/master/screenshots/dcero2.jpg">
-<img src="https://github.com/YourRepository/DCero/blob/master/screenshots/dcero3.jpg">
+<img src="https://github.com/QNecesitas/Tienda-DCero/blob/main/screenshots/DCeroDise%C3%B1ado.png"/>
+<img src="https://github.com/QNecesitas/Tienda-DCero/blob/main/screenshots/DCeroDise%C3%B1ado1.png"/>
+<img src="https://github.com/QNecesitas/Tienda-DCero/blob/main/screenshots/DCeroDise%C3%B1ado2.png"/>
